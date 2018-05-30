@@ -1,0 +1,26 @@
+{
+  "name": "tablelize",
+  "version": "0.0.1",
+  "description": "A friendly wrapper for Table Store Node.js SDK (by Aliyun)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instapp/tablelize.git"
+  },
+  "keywords": [
+    "tablelize",
+    "tablestore",
+    "mongodb",
+    "bigtable",
+    "aliyun"
+  ],
+  "author": "Acathur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/instapp/tablelize/issues"
+  },
+  "homepage": "https://github.com/instapp/tablelize#readme"
+}
