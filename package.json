@@ -1,9 +1,11 @@
 {
   "name": "tablelize",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A friendly wrapper for Table Store Node.js SDK (by Aliyun)",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "rm -rf lib && tsc",
+    "dev": "node samples",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/instapp/tablelize/issues"
   },
-  "homepage": "https://github.com/instapp/tablelize#readme"
+  "homepage": "https://github.com/instapp/tablelize#readme",
+  "dependencies": {
+    "camelcase-keys": "^4.2.0",
+    "tablestore": "^4.0.11"
+  },
+  "devDependencies": {
+    "@types/camelcase-keys": "^4.0.0",
+    "@types/node": "^10.1.4"
+  }
 }

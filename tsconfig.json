@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+	"target": "es2015",
+	"lib": ["es2016"],
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "lib",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+	"declaration": true,
+	"removeComments": true
+  },
+  "include": [
+    "src"
+  ]
+}
