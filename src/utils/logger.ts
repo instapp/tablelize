@@ -5,8 +5,4 @@
 
 const logger = console
 
-logger.error = function (e: any) {
-	throw new Error(e)
-}
-
 export default logger

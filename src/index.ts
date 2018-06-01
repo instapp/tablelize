@@ -13,15 +13,17 @@ import TablelizeError from './utils/TablelizeError'
 class Tablelize {
 
     // types
-    static readonly INTEGER = 'INTEGER'  // int64 (node)
-    static readonly STRING = 'STRING'    // String
-    static readonly DOUBLE = 'DOUBLE'    // Number
-    static readonly BOOLEAN = 'BOOLEAN'  // Boolean
-    static readonly BINARY = 'BINARY'    // Buffer
+	static readonly INTEGER = 'INTEGER'  // int64 (node)
+	static readonly STRING = 'STRING'    // String
+	static readonly DOUBLE = 'DOUBLE'    // Number
+	static readonly BOOLEAN = 'BOOLEAN'  // Boolean
+	static readonly BINARY = 'BINARY'    // Buffer
 
-    // directions
-    static readonly FORWARD = TableStore.Direction.FORWARD
-	static readonly BACKWARD = TableStore.Direction.BACKWARD
+	// directions
+	static readonly Direction = {
+		FORWARD: TableStore.Direction.FORWARD,
+		BACKWARD: TableStore.Direction.BACKWARD
+	}
 
 	// static class
 	static Schema = Schema
@@ -42,6 +44,10 @@ class Tablelize {
 
 	model(name: string, schema: any) {
 		return new Model(name, schema, this)
+	}
+
+	define(name: string, schema: any) {
+		return this.model(name, schema)
 	}
 
 	async listTable() {

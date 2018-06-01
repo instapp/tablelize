@@ -11,12 +11,15 @@ declare class Tablelize {
     static readonly DOUBLE: string;
     static readonly BOOLEAN: string;
     static readonly BINARY: string;
-    static readonly FORWARD: any;
-    static readonly BACKWARD: any;
+    static readonly Direction: {
+        FORWARD: any;
+        BACKWARD: any;
+    };
     static Schema: typeof Schema;
     client: Client;
     constructor(config: ConstructorConfig, opts: ConstructorOptions);
     model(name: string, schema: any): Model;
+    define(name: string, schema: any): Model;
     listTable(): Promise<any>;
 }
 export default Tablelize;

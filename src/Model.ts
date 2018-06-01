@@ -200,7 +200,7 @@ class Model {
 	async find(query: any, opts?: FindOptions) {
 		query = query || {}
 		opts = opts || {}
-		opts.direction = opts.direction || Tablelize.FORWARD
+		opts.direction = opts.direction || TableStore.Direction.FORWARD
 
 		let params: any
 
@@ -228,8 +228,8 @@ class Model {
 					const isInteger = col.type === Tablelize.INTEGER
 
 					if (typeof value === 'undefined' || value === null) {
-						itemStart[col.name] = (opts.direction === Tablelize.FORWARD) ? TableStore.INF_MIN : TableStore.INF_MAX
-						itemEnd[col.name] = (opts.direction === Tablelize.FORWARD) ? TableStore.INF_MAX : TableStore.INF_MIN
+						itemStart[col.name] = (opts.direction === TableStore.Direction.FORWARD) ? TableStore.INF_MIN : TableStore.INF_MAX
+						itemEnd[col.name] = (opts.direction === TableStore.Direction.FORWARD) ? TableStore.INF_MAX : TableStore.INF_MIN
 					} else if (typeof value === 'object') {
 						if (typeof value.$start !== 'undefined') {
 							itemStart[col.name] = isInteger ? Long.fromNumber(value.$start) : value.$start

@@ -1,6 +1,6 @@
 {
   "name": "tablelize",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A friendly wrapper for Table Store Node.js SDK (by Aliyun)",
   "main": "lib/index.js",
   "scripts": {
