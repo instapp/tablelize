@@ -307,7 +307,7 @@ class Model {
 		const deleteAllArray = []
 
 		for (const col of this.schema.columns) {
-			if (!col.primaryKey && values[col.name]) {
+			if (!col.primaryKey && values[col.name] !== undefined) {
 				let item: any = {}
 				let value: any = values[col.name]
 
